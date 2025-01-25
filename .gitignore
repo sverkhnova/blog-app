@@ -1,0 +1,41 @@
+# Node.js
+node_modules/
+package-lock.json
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Build
+build/
+dist/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.example
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Miscellaneous
+*.bak
+*.tmp
