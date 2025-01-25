@@ -1,3 +1,9 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
 build:
   docker:
-    web: ./backend/Dockerfile
+    web: Dockerfile
+release:
+  command:
+    - npx prisma migrate deploy # Пример команды для миграций (если используете Prisma)
