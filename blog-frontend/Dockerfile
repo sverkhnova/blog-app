@@ -1,12 +1,9 @@
-FROM node:16 as build
-
+FROM node:18
 WORKDIR /app
-COPY ./blog-frontend/package*.json ./
+COPY package*.json ./
 RUN npm install
-COPY ./blog-frontend .
+COPY . .
 RUN npm run build
-
-FROM nginx:alpine
-COPY --from=build /app/build /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+RUN npm install -g serve
+EXPOSE 3000
+CMD ["serve", "-s", "build"]
