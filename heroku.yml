@@ -6,4 +6,8 @@ build:
     web: Dockerfile
 release:
   command:
-    - npx prisma migrate deploy # Пример команды для миграций (если используете Prisma)
+    - npx prisma migrate deploy
+  config:
+    DATABASE_URL: your_database_url
+run:
+  web: npm start
